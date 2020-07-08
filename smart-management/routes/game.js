@@ -25,8 +25,8 @@ router.post('/:id/movement', function(req, res, next) {
       if (verifyTurn(movements, req.params.id, req.body.movement.player, game)) {
         if (verifyMovement(movements, req.params.id, req.body.movement.position.x, req.body.movement.position.y)) {
           const movement = newMovement(req);
-          movements.push(movement);
-          //result();
+          movements.push(movement, movements, req.params.id);
+          result(movements, req.params.id);
           res.send(movement);
         } else {
           res.send({"msg": "Movimento inválido"})
