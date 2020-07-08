@@ -8,7 +8,7 @@ function verifyMovement(movements, id, x, y) {
 
   //verify if already exists
   for(let i = 0; i < movements.length; i++){
-    if (movements[i].id == id && movements[i].position.x == x && movements[i].position.x == y) {
+    if (movements[i].id == id && movements[i].position.x == x && movements[i].position.y == y) {
       isValid = false;
     }
   }
