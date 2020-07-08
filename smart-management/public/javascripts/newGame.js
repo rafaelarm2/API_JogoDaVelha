@@ -1,6 +1,6 @@
 const {"v4": uuidv4} = require('uuid');
 
-function newGame(req, res){
+function newGame(){
   //Generate ID
   const idGame = uuidv4();
 
@@ -17,7 +17,7 @@ function newGame(req, res){
       firstPlayer: firstPlayer
   };
 
-  res.send(game);
+  return game;
 }
 
 module.exports = {newGame};
