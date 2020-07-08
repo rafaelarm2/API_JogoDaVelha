@@ -4,3 +4,11 @@
 <form action="/game" method="post">
   <input type="submit" value="Submit">
 </form>
+
+<form action="/game/1/movement" method="post">
+  <input type="text" name="movement[id]" placeholder="id">
+  <input type="text" name="movement[player]" placeholder="player">
+  <input type="text" name="movement[position][x]" placeholder="x">
+  <input type="text" name="movement[position][y]" placeholder="y">
+  <input type="submit" value="Submit">
+</form>

@@ -2,8 +2,8 @@ const {"v4": uuidv4} = require('uuid');
 
 function newGame(req, res){
   //Generate ID
-  const idGame = uuidv4();
-
+  //const idGame = uuidv4();
+  const idGame = "1";
   //Generate first player
   var firstPlayer = '';
   if (Math.floor(Math.random() * 2) == 0) {
@@ -13,11 +13,11 @@ function newGame(req, res){
   }
 
   const game = {
-      idGame: idGame,
+      id: idGame,
       firstPlayer: firstPlayer
   };
 
-  res.send(game);
+  return game;
 }
 
 module.exports = {newGame};
