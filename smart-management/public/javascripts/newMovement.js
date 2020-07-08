@@ -1,5 +1,4 @@
-function newMovement(req){
-  //console.log(req);
+function newMovement(req, movements){
   movement = {
     id : req.body.movement.id,
     player : req.body.movement.player,
