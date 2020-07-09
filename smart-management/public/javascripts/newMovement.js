@@ -1,3 +1,5 @@
+
+//Cria um novo movimento de acordo com os campos do requisition.body
 function newMovement(req, movements){
   movement = {
     id : req.body.movement.id,

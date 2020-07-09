@@ -1,12 +1,18 @@
 
+//Verifica como fica a situação da "matriz" do jogo da velha para cada novo movimento e calcula resultado
 function result(movements, id) {
   var gameInfo = {
     status : "Partida em andamento"
   };
+
+  //inicialização das variáveis de apoio
   var colX = [0,0,0], colO = [0,0,0], rowX = [0,0,0], rowO = [0,0,0];
   var dia1X = 0, dia1O = 0, dia2X = 0, dia2O = 0, contMovement = 0;
   const dim_matrix = 2;
 
+  //Para cada movimento salvo para o jogo definido pelo id, modifique o contador para cada coluna/linha/diagonal
+  //de acordo com o jogador (X ou O) que fez a jogada. Se qualquer um dos contadores chegar a 3, significa que a
+  //partida acabou. Se contMovement chegar a 9 significa que não é possível fazer mais jogadas.
   for(let i = 0; i < movements.length; i++){
     if (movements[i].id == id) {
       contMovement++;
@@ -39,6 +45,7 @@ function result(movements, id) {
     }
   }
 
+  //Define os resultados de acordo com os contadores
   if (contMovement == 9) {
     gameInfo = {
       status : "Partida finalizada",
@@ -59,6 +66,7 @@ function result(movements, id) {
       result : "X"
     };
   }
+
   return gameInfo;
 }
 

@@ -1,6 +1,8 @@
 
+//Verifica se é o player correto que está jogando em um determinado turno
 function verifyTurn(movements, idGame, player, game){
-  //catch id of last movement
+
+  //Pega o último movimento realizado
   var idLastMovement;
   for(let i = 0; i < movements.length; i++){
     if (movements[i].id == idGame) {
@@ -8,7 +10,8 @@ function verifyTurn(movements, idGame, player, game){
     }
   }
 
-  //check if the last movement was executed by same player
+  //Compara com o player que está tentando realizar o próximo movimento
+  //Se não houver movimentos, compara com o firstPlayer de game
   var correctTurn = false;
   if (typeof idLastMovement != 'undefined') {
     if (movements[idLastMovement].player != player) {
