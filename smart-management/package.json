@@ -16,5 +16,18 @@
     "morgan": "~1.9.1",
     "node-sass-middleware": "0.11.0",
     "uuid": "^8.2.0"
-  }
+  },
+  "description": "Jogo da Velha - DTI",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelarm2/API_JogoDaVelha.git"
+  },
+  "author": "Rafaela Milagres Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelarm2/API_JogoDaVelha/issues"
+  },
+  "homepage": "https://github.com/rafaelarm2/API_JogoDaVelha#readme"
 }
