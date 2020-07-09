@@ -2,8 +2,11 @@ const {"v4": uuidv4} = require('uuid');
 
 function newGame(req, res){
   //Generate ID
-  //const idGame = uuidv4();
-  const idGame = "1";
+  const idGame = uuidv4();
+
+  //Bloco de código usado para teste
+  //const idGame = 1;
+
   //Generate first player
   var firstPlayer = '';
   if (Math.floor(Math.random() * 2) == 0) {
