@@ -11,12 +11,14 @@ const {result} = require('../public/javascripts/result.js');
 var games = [];
 var movements = [];
 
+/* Rota para criar novo jogo*/
 router.post('/', function(req, res, next) {
   const game = newGame();
   games.push(game);
   res.send(game);
 });
 
+/* Rota para criar um novo movimento para um determinado jogo*/
 router.post('/:id/movement', function(req, res, next) {
   game = findGame(games, req.params.id.toString());
 
